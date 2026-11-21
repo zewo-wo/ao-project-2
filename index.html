@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Silver Ledger — a merchant's command desk for Albion Online crafting, markets, loot and trade intelligence.">
+  <meta property="og:title" content="Silver Ledger — Merchant's Command Desk">
+  <meta property="og:description" content="Craft with purpose. Trade with insight. Keep every silver accounted for.">
+  <meta property="og:image" content="assets/brand-crest.webp">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Silver Ledger — Merchant's Command Desk</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand-lockup" href="#home" data-view-link="home" aria-label="Silver Ledger home">
+        <img src="assets/brand-crest.webp" alt="Silver Ledger fantasy merchant crest" class="brand-mark">
+        <span class="brand-copy"><strong>Silver Ledger</strong><small>MERCHANT'S COMMAND DESK</small></span>
+      </a>
+
+      <div class="nav-caption">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-link active" type="button" data-view="home" aria-current="page">
+          <span class="nav-icon">⌂</span><span>Overview</span>
+        </button>
+        <button class="nav-link" type="button" data-view="market">
+          <span class="nav-icon">◈</span><span>Market & Crafting</span><span class="nav-tag">LIVE</span>
+        </button>
+        <button class="nav-link" type="button" data-view="loot">
+          <span class="nav-icon">⚔</span><span>Loot Ledger</span>
+        </button>
+        <button class="nav-link" type="button" data-view="about">
+          <span class="nav-icon">✦</span><span>About the Hub</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><strong>Merchant's tools</strong><small>Two workbenches · one portal</small></div>
+      </div>
+      <div class="sidebar-footer">UNOFFICIAL FAN-MADE TOOL<br>NOT AFFILIATED WITH SANDBOX INTERACTIVE</div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumbs"><span>ALBION ONLINE</span><i>/</i><strong id="breadcrumbCurrent">Overview</strong></div>
+        <div class="topbar-right">
+          <span class="connection-label"><span class="status-dot"></span> Portal ready</span>
+          <a class="topbar-link" href="https://github.com/zewo-wo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="view active" id="view-home" aria-labelledby="home-title">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-line"></span> THE MERCHANT'S GUILDHALL</div>
+              <h1 id="home-title">Every silver has<br><em>a story.</em></h1>
+              <p class="hero-subtitle">Craft with purpose. Trade with insight. Keep every drop accounted for.</p>
+              <p class="hero-description">Your Albion merchant workspace brings crafting economics and loot intelligence together in one command desk.</p>
+              <div class="hero-actions">
+                <button class="button button-primary" data-open-view="market" type="button">Enter Market Desk <span>→</span></button>
+                <button class="button button-quiet" data-open-view="loot" type="button">Review Loot Ledger <span>↗</span></button>
+              </div>
+            </div>
+            <div class="hero-art-wrap" aria-hidden="true">
+              <div class="hero-art-glow"></div>
+              <img src="assets/brand-crest.webp" alt="" class="hero-art">
+              <div class="art-stamp">TRADE<br>WISELY</div>
+            </div>
+            <div class="hero-corner">SL / 01</div>
+          </div>
+
+          <div class="section-heading">
+            <div><div class="eyebrow">YOUR WORKBENCHES</div><h2>Choose your next move</h2></div>
+            <span class="section-aside">TWO TOOLS · ONE MERCHANT'S DESK</span>
+          </div>
+
+          <div class="tool-grid">
+            <article class="tool-card market-card">
+              <div class="tool-card-top"><span class="tool-symbol">◈</span><span class="tool-kicker">CRAFTING · MARKET INTELLIGENCE</span></div>
+              <h3>Market & Crafting</h3>
+              <p>Calculate weapon and armor crafting returns, compare material costs, study market trends and manage price alerts.</p>
+              <div class="feature-chips"><span>Profit calculator</span><span>Craft planner</span><span>Price trends</span><span>Alerts & strategy vault</span></div>
+              <button class="card-action" data-open-view="market" type="button">Open Market Desk <b>→</b></button>
+            </article>
+            <article class="tool-card loot-card">
+              <div class="tool-card-top"><span class="tool-symbol">⚔</span><span class="tool-kicker">BATTLEFIELD · LOOT INTELLIGENCE</span></div>
+              <h3>Loot Ledger</h3>
+              <p>Import your loot CSV, inspect item records, compare player totals and guild activity, then export filtered reports.</p>
+              <div class="feature-chips"><span>CSV import</span><span>Player statistics</span><span>Top items</span><span>Filtered export</span></div>
+              <button class="card-action" data-open-view="loot" type="button">Open Loot Ledger <b>→</b></button>
+            </article>
+          </div>
+
+          <div class="info-strip">
+            <div class="info-icon">◉</div>
+            <div><strong>Your data stays in your browser</strong><p>The loot viewer processes selected CSV files locally. The market tool saves its preferences and cached quotes in browser storage. Market prices and item artwork may be requested from external services.</p></div>
+          </div>
+        </section>
+
+        <section class="view tool-view" id="view-market" aria-labelledby="market-title" hidden>
+          <div class="tool-view-heading">
+            <div><div class="eyebrow">THE EXCHANGE FLOOR</div><h1 id="market-title">Market <em>& Crafting</em></h1><p>Plan your production, compare city prices and watch the market.</p></div>
+            <a class="button button-outline" id="marketExternal" target="_blank" rel="noopener noreferrer">Open standalone ↗</a>
+          </div>
+          <div class="embed-toolbar"><span><span class="status-dot"></span> Market workspace · hosted app</span><button type="button" class="text-button" data-refresh-frame="market">Reload workspace ↻</button></div>
+          <div class="frame-shell">
+            <iframe id="marketFrame" title="Silver Ledger Market and Crafting application" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+          </div>
+          <p class="embed-footnote">The market workspace is loaded from the original Silver Ledger GitHub Pages deployment. If it does not appear, use “Open standalone” above.</p>
+        </section>
+
+        <section class="view tool-view" id="view-loot" aria-labelledby="loot-title" hidden>
+          <div class="tool-view-heading">
+            <div><div class="eyebrow">THE BATTLEFIELD RECORD</div><h1 id="loot-title">Loot <em>Ledger</em></h1><p>Bring your loot reports. Find the value hidden in every run.</p></div>
+            <a class="button button-outline" id="lootExternal" target="_blank" rel="noopener noreferrer">Open standalone ↗</a>
+          </div>
+          <div class="embed-toolbar"><span><span class="status-dot"></span> Loot workspace · hosted app</span><button type="button" class="text-button" data-refresh-frame="loot">Reload workspace ↻</button></div>
+          <div class="frame-shell">
+            <iframe id="lootFrame" title="Albion Online Loot Log Viewer application" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+          </div>
+          <p class="embed-footnote">Import your own CSV in the viewer. Its original documentation says the selected file is processed in your browser and is not uploaded to the project server. If the workspace does not appear, use “Open standalone” above.</p>
+        </section>
+
+        <section class="view" id="view-about" aria-labelledby="about-title" hidden>
+          <div class="eyebrow">A MERCHANT'S FIELD GUIDE</div>
+          <h1 class="about-title" id="about-title">One guildhall.<br><em>Two workbenches.</em></h1>
+          <p class="about-lead">Silver Ledger is an independent fan-made portal that brings two existing Albion Online utility projects into one branded workspace.</p>
+          <div class="about-grid">
+            <article class="about-panel"><span class="tool-symbol">◈</span><h2>Silver Ledger</h2><p>Crafting profit calculator, multi-item craft planner, market price trends, fluctuation alerts, saved strategies and a local strategy vault.</p><a href="https://github.com/zewo-wo/Silver-Ledger" target="_blank" rel="noopener noreferrer">View source repository ↗</a></article>
+            <article class="about-panel"><span class="tool-symbol">⚔</span><h2>AO Loot Log Viewer</h2><p>Browser-based loot CSV analysis with record search, player/guild/cluster filters, top-item summaries, player statistics and filtered CSV export.</p><a href="https://github.com/zewo-wo/ao-loot-log-viewer" target="_blank" rel="noopener noreferrer">View source repository ↗</a></article>
+          </div>
+          <div class="info-strip"><div class="info-icon">ⓘ</div><div><strong>Integration note</strong><p>This package is a unified portal shell. The two original applications are loaded from their existing GitHub Pages addresses, rather than copied into this folder. This preserves their independently maintained app behavior and keeps the upload package lightweight. An internet connection is required for the embedded workspaces.</p></div></div>
+          <div class="legal-note"><strong>Community project notice</strong><p>Albion Online and related game names, marks and assets belong to their respective rights holders. This unofficial fan-made utility is not affiliated with, endorsed by, or sponsored by Sandbox Interactive GmbH.</p></div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>© <span id="year"></span> SILVER LEDGER</span><span>CRAFT WITH PURPOSE · TRADE WITH INSIGHT</span><a href="https://github.com/zewo-wo" target="_blank" rel="noopener noreferrer">BUILT FOR THE GUILDHALL ↗</a></footer>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
